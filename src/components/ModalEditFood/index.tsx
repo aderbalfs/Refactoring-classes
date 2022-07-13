@@ -15,7 +15,7 @@ interface IFood {
   available: boolean;
   image: string
 }
-interface AddFoodProps {
+interface AddFood {
   image: string;
   name: string;
   price: string;
@@ -25,12 +25,12 @@ interface ModalEditFoodProps {
   isOpen: boolean;
   editingFood: IFood;
   setIsOpen: () => void;
-  handleUpdateFood: (data: AddFoodProps) => void;
+  handleUpdateFood: (data: AddFood) => void;
 }
 
 export default function ModalEditFood({isOpen, setIsOpen, editingFood, handleUpdateFood}:ModalEditFoodProps){
 
-  const handleSubmit = async (data: AddFoodProps) => {
+  const handleSubmit = async (data: AddFood) => {
     handleUpdateFood(data);
     setIsOpen();
   };

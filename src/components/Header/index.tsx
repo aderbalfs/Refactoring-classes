@@ -2,7 +2,6 @@ import { FiPlusSquare } from 'react-icons/fi';
 
 import { Container } from './styles';
 import Logo from '../../assets/logo.svg';
-import * as React from 'react';
 
 interface HeaderProps {
   openModal: () => void
@@ -30,3 +29,4 @@ export function Header({openModal}: HeaderProps){
   </Container>
   )
 }
+export default Header
