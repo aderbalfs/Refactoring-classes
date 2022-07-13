@@ -9,8 +9,8 @@ import { FoodsContainer } from "./styles";
 import * as React from "react";
 
 interface IFood {
-  id: number;
   name: string;
+  id: number;
   description: string;
   price: number;
   available: boolean;
@@ -33,7 +33,8 @@ export default function Dashboard(){
   useEffect(() => {
     async function getFood() {
       const response = await api.get("/foods");
-      setFoods({response.data});
+
+      setFoods(response.data);
     }
     getFood();
   }, [])  
